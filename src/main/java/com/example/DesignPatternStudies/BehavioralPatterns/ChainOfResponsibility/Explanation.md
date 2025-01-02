@@ -12,8 +12,8 @@ você faz, mas não adianta, então o primeiro atendente passa o seu chamado ao 
 para constatar a lentidão então pede novamente para desligar e aguardar para religar, enquanto isso ele esta
 configurando algo relacionado a sua rede, quando pensamos que irá funcionar, infelizmente não, mas 
 há mais uma possibilidade, o segundo atendente passa para o terceiro, que por fim pede para checar
-o fio do aparelho, e você nota que está desgastado e com mal contato, então o terceiro processa um novo
-pedido de cabos para poder solucionar o seu problema.
+o fio do aparelho, e você nota que está desgastado e com mal contato, então o terceiro processa o seu 
+pedido para solucionar o problema.
 
 # Resultado
 
