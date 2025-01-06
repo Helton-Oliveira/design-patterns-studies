@@ -1,4 +1,4 @@
-package com.example.DesignPatternStudies.BehavioralPatterns.Iterator.code;
+package com.example.DesignPatternStudies.BehavioralPatterns.Iterator.code.step_01;
 
 public interface Iterator {
     Task getNext();
