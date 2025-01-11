@@ -56,19 +56,16 @@ public class ConcreteControlCenter implements ControlCenter{
     }
 
     private void sendCommandForRefueling(String stationName, String resource) {
-        var resourceQuantity = 0;
         if(resource.equalsIgnoreCase("oxygen")) {
             invoker.setCommand(new RequestOxygen(planet, stationName));
-            resourceQuantity = invoker.executeCommand();
         }
         if(resource.equalsIgnoreCase("fuel")) {
             invoker.setCommand(new RequestFuel(planet, stationName));
-            resourceQuantity = invoker.executeCommand();
         }
         if(resource.equalsIgnoreCase("damage")) {
             invoker.setCommand(new RequestRepairParts(planet, stationName));
-            resourceQuantity = invoker.executeCommand();
         }
+        var resourceQuantity = invoker.executeCommand();
         spaceStation.replenishResource(stationName, resourceQuantity);
     }
 
