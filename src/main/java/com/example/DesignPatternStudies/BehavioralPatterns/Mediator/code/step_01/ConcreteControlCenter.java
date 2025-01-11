@@ -1,7 +1,5 @@
 package com.example.DesignPatternStudies.BehavioralPatterns.Mediator.code.step_01;
 
-import com.example.DesignPatternStudies.BehavioralPatterns.Mediator.SpaceStation;
-
 public class ConcreteControlCenter implements ControlCenter {
     private final SpaceStation spaceStation;
 

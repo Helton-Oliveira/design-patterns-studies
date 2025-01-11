@@ -1,4 +1,4 @@
-package com.example.DesignPatternStudies.BehavioralPatterns.Mediator;
+package com.example.DesignPatternStudies.BehavioralPatterns.Mediator.code.step_01;
 
 public class SpaceStation {
     private String stationName;
