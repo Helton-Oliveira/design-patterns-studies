@@ -1,7 +1,7 @@
 # Sistema de transação Bancária
 
 Neste sistema alteramos um pouco a sua estrutura para poderem ser realizadas validações após uma 
-transação na conta.
+transação na conta, caso a validação der errado, então restauramos a classe a seu último estado.
 
 ![diagrama do projeto](Memento-ChainOfResponsibility.png)
 
