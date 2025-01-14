@@ -15,9 +15,9 @@ public class MementoTest {
 
         account.makePix(500);
         bank.backup();
-
-        bank.undoTransaction();
+        account.makeDeposit(100);
         bank.ShowLastMonthStatement();
+        bank.undoTransaction();
         System.out.println(account.getBalance());
     }
 }
