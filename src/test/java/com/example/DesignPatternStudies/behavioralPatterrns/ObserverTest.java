@@ -1,13 +1,17 @@
 package com.example.DesignPatternStudies.behavioralPatterrns;
 
-import com.example.DesignPatternStudies.BehavioralPatterns.Observer.code.step01.AppleShares;
-import com.example.DesignPatternStudies.BehavioralPatterns.Observer.code.step01.ConcreteInvestor;
+import com.example.DesignPatternStudies.BehavioralPatterns.Observer.code.step02.*;
+import com.example.DesignPatternStudies.BehavioralPatterns.Observer.code.step02.Mediator.*;
+
+
+import com.example.DesignPatternStudies.BehavioralPatterns.Observer.code.step02.Memento.Caretaker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
 public class ObserverTest {
 
-    @Test
+    /*@Test
     @DisplayName("Deve notificar investidor sobre ação")
     void observerProjectStep_01() {
         var action = new AppleShares(500.0);
@@ -20,6 +24,29 @@ public class ObserverTest {
         action.valueAction(0.3);
         action.valueAction(0.3);
         action.valueAction(0.3);
+
+    }*/
+
+    @Test
+    @DisplayName("Deve notificar investidor sobre ação")
+    void observerProjectStep_02() {
+        var tonyStark = new ConcreteInvestor("Tony Stark");
+        var steveRogers = new ConcreteInvestor("Steve Rogers");
+        var bruceBanner = new ConcreteInvestor("Bruce Banner");
+        var caretaker = new Caretaker();
+        var mediator = new ConcreteMediator(caretaker);
+        var appleShare = new AppleShares(400.0, mediator);
+
+        mediator.subscribe(tonyStark);
+        mediator.subscribe(steveRogers);
+        mediator.subscribe(bruceBanner);
+
+        appleShare.toValue(0.30);
+        appleShare.toValue(0.5);
+        appleShare.devalue(0.7);
+        appleShare.toValue(0.10);
+
+        mediator.unsubscribe(bruceBanner);
 
     }
 }
