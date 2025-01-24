@@ -4,13 +4,14 @@ package com.example.DesignPatternStudies.BehavioralPatterns.Strategy.code.step_0
 import com.example.DesignPatternStudies.BehavioralPatterns.Strategy.code.step_02.State.Transport;
 
 public class TransportStrategy {
-    private Transport transport;
+    private Strategy strategy;
 
-    public void setTransport(Transport transport) {
-        this.transport = transport;
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
     }
 
     public void executeStrategy(Double routeDistance) {
+        var transport = (Transport) strategy;
         transport.calculateFare(routeDistance);
     }
 }

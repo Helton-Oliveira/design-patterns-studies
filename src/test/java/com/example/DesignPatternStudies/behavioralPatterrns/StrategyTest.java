@@ -29,17 +29,17 @@ public class StrategyTest {
         var bus = new Bus();
         var subway = new Subway();
 
-        transport.setTransport(taxi);
+        transport.setStrategy(taxi);
         taxi.underMaintenance();
         taxi.available();
         taxi.setClimate("rainy");
         transport.executeStrategy(13.0);
 
-        transport.setTransport(bus);
+        transport.setStrategy(bus);
         bus.underMaintenance();
         transport.executeStrategy(13.0);
 
-        transport.setTransport(subway);
+        transport.setStrategy(subway);
         subway.available();
         transport.executeStrategy(13.0);
     }
