@@ -10,7 +10,7 @@ public abstract class Payment {
         this.products = products;
     }
 
-    public void pay() {
+    public final void pay() {
         validatePaymentData();
         processPayment();
         confirmPayment();
